@@ -21,11 +21,11 @@ public class XenoAmessAvatarGenerator {
     public static Color backgroundColor = new Color(0, 0, 0, 0);
 
     // <Color,rate of the Color>
-    public static ArrayList<Entry<Color, Double>> colors = new ArrayList<Entry<Color, Double>>();
+    public static ArrayList<Entry<Color, Double>> colors = new ArrayList<>();
 
     static {
-        colors.add(new AbstractMap.SimpleEntry<Color, Double>(Color.red, 0.30));
-        colors.add(new AbstractMap.SimpleEntry<Color, Double>(Color.black, 0.30));
+        colors.add(new AbstractMap.SimpleEntry<>(Color.red, 0.30));
+        colors.add(new AbstractMap.SimpleEntry<>(Color.black, 0.30));
     }
 
     // Color of the plate of thevcircle
@@ -34,12 +34,12 @@ public class XenoAmessAvatarGenerator {
     // repeat time for every colors.
     public static int round = 3;
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         File file = new File(outputFileName);
 
         BufferedImage bi = new BufferedImage(imageWidth, imageWidth, BufferedImage.TYPE_INT_ARGB);
-        Graphics2D g2 = (Graphics2D) bi.createGraphics();
+        Graphics2D g2 = bi.createGraphics();
         g2.setBackground(backgroundColor);
         g2.clearRect(0, 0, imageWidth, imageHeight);
 
