@@ -76,12 +76,12 @@ public class XenoAmessAvatarGenerator {
         double nowAngle = 90 - eachSideSize * colors.get(0).getValue() / 2;
         for (int i = 0; i < round; i++) {
             for (Entry<Color, Double> entry : colors) {
-                System.out.println(nowAngle);
+//                System.out.println(nowAngle);
                 g2.setColor(entry.getKey());
                 // System.out.println(eachSideSize);
                 g2.fillArc(0, 0, imageDiameter, imageDiameter, (int) nowAngle, (int) (eachSideSize * entry.getValue()));
                 nowAngle += eachSideSize * entry.getValue();
-                System.out.println(nowAngle);
+//                System.out.println(nowAngle);
                 g2.setColor(plateColor);
                 g2.fillArc(0, 0, imageDiameter, imageDiameter, (int) nowAngle, (int) (eachPlateAngle));
                 nowAngle += eachPlateAngle;
@@ -150,9 +150,9 @@ public class XenoAmessAvatarGenerator {
                         .append(" fill=\"")
                         .append(colorString)
                         .append("\"/>");
-                System.out.println(nowAngle);
+//                System.out.println(nowAngle);
                 nowAngle += eachSideSize * 0.30;
-                System.out.println(nowAngle);
+//                System.out.println(nowAngle);
                 nowAngle += eachPlateAngle;
             }
         }

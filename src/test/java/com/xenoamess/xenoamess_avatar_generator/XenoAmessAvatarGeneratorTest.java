@@ -28,6 +28,8 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 
 public class XenoAmessAvatarGeneratorTest {
 
@@ -39,5 +41,7 @@ public class XenoAmessAvatarGeneratorTest {
         XenoAmessAvatarGenerator.generateSvg(10240, 0.4, new String[]{"#FF0000", "#000000"}, "#FFFFFF", 3, new File(
                 "out/test.svg"));
 
+        assertNotEquals(new File("out/test.png").length(), 0);
+        assertNotEquals(new File("out/test.svg").length(), 0);
     }
 }
