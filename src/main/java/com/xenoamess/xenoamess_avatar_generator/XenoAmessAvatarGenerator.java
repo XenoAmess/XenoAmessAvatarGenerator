@@ -124,8 +124,12 @@ public class XenoAmessAvatarGenerator {
         double eachSideSize = 360.0 / round;
         double eachPlateSize = 1.0 - colorStrings.length * 0.3;
 
-        svgStringBuilder.append("<circle cx=\"0\" cy=\"0\" r=\"").append(imageDiameter / 2.0).append("\" ").append(
-                "fill=\"").append(plateColorString).append("\"/>");
+        svgStringBuilder.append("<circle cx=\"0\" cy=\"0\" r=\"").
+                append(imageDiameter / 2.0)
+                .append("\" ")
+                .append("fill=\"")
+                .append(plateColorString)
+                .append("\"/>");
 
         double eachPlateAngle = eachPlateSize * eachSideSize / colorStrings.length;
         double nowAngle = 180.0 - eachSideSize * 0.30 / 2;
@@ -170,8 +174,8 @@ public class XenoAmessAvatarGenerator {
      */
     public static void main(String[] args) {
         new File("out").mkdir();
-        generatePng(10240, 0.4, new String[]{"#FF0000", "#000000"}, "#FFFFFF", 3, new File("out/test.png"));
-        generateSvg(10240, 0.4, new String[]{"#FF0000", "#000000"}, "#FFFFFF", 3, new File("out/test.svg"));
+        generatePng(10240, 0.5, new String[]{"#FF0000", "#000000"}, "#FFFFFF", 3, new File("out/test.png"));
+        generateSvg(10240, 0.5, new String[]{"#FF0000", "#000000"}, "#FFFFFF", 3, new File("out/test.svg"));
     }
 
     /**
@@ -234,7 +238,6 @@ public class XenoAmessAvatarGenerator {
         g2.fillOval((int) (imageDiameter - innerRadiusRatio * imageDiameter) / 2,
                 (int) (imageDiameter - innerRadiusRatio * imageDiameter) / 2, (int) (innerRadiusRatio * imageDiameter),
                 (int) (innerRadiusRatio * imageDiameter));
-
         try {
             ImageIO.write(bi, "PNG", outputFile);
         } catch (IOException e) {

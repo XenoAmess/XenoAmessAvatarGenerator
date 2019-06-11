@@ -35,13 +35,24 @@ public class XenoAmessAvatarGeneratorTest {
 
     public void singleTest(int imageDiameter) {
         new File("out").mkdir();
-        XenoAmessAvatarGenerator.generatePng(imageDiameter, 0.4, new String[]{"#FF0000", "#000000"}, "#FFFFFF", 3,
-                new File(
-                        "out/output_" + imageDiameter + ".png"));
-        XenoAmessAvatarGenerator.generateSvg(imageDiameter, 0.4, new String[]{"#FF0000", "#000000"}, "#FFFFFF", 3,
-                new File(
-                        "out/output_" + imageDiameter + ".svg"));
-
+        XenoAmessAvatarGenerator.generatePng(
+                imageDiameter,
+                0.5,
+                new String[]{"#FF0000", "#000000"},
+                "#FFFFFF",
+                3,
+                new File("out/output_" + imageDiameter + ".png"));
+        XenoAmessAvatarGenerator.generateSvg(
+                imageDiameter,
+                0.5,
+                new String[]{"#FF0000", "#000000"},
+                "#FFFFFF",
+                3,
+                new File("out/output_" + imageDiameter + ".svg"));
+//        XenoAmessAvatarGenerator.generatePng_ImageIO(imageDiameter, 0.5, new String[]{"#FF0000", "#000000"}, "#FFFFFF"
+//                , 3,
+//                new File(
+//                        "out/output_native" + imageDiameter + ".png"));
         assertNotEquals(new File("out/output_" + imageDiameter + ".png").length(), 0);
         assertNotEquals(new File("out/output_" + imageDiameter + ".svg").length(), 0);
     }
@@ -50,6 +61,7 @@ public class XenoAmessAvatarGeneratorTest {
     public void mainTest() {
         singleTest(64);
         singleTest(1024);
+//        singleTest(4096);
 //        singleTest(8192);
 //        singleTest(10240);
 //        singleTest(20480);
