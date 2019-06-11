@@ -53,5 +53,4 @@ FILE
 .settings
 bin
 
-**/output**.png
 test.svg

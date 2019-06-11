@@ -33,15 +33,25 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class XenoAmessAvatarGeneratorTest {
 
+    public void singleTest(int imageDiameter) {
+        new File("out").mkdir();
+        XenoAmessAvatarGenerator.generatePng(imageDiameter, 0.4, new String[]{"#FF0000", "#000000"}, "#FFFFFF", 3,
+                new File(
+                        "out/output_" + imageDiameter + ".png"));
+        XenoAmessAvatarGenerator.generateSvg(imageDiameter, 0.4, new String[]{"#FF0000", "#000000"}, "#FFFFFF", 3,
+                new File(
+                        "out/output_" + imageDiameter + ".svg"));
+
+        assertNotEquals(new File("out/output_" + imageDiameter + ".png").length(), 0);
+        assertNotEquals(new File("out/output_" + imageDiameter + ".svg").length(), 0);
+    }
+
     @Test
     public void mainTest() {
-        new File("out").mkdir();
-        XenoAmessAvatarGenerator.generatePng(3072, 0.4, new String[]{"#FF0000", "#000000"}, "#FFFFFF", 3, new File(
-                "out/test.png"));
-        XenoAmessAvatarGenerator.generateSvg(10240, 0.4, new String[]{"#FF0000", "#000000"}, "#FFFFFF", 3, new File(
-                "out/test.svg"));
-
-        assertNotEquals(new File("out/test.png").length(), 0);
-        assertNotEquals(new File("out/test.svg").length(), 0);
+        singleTest(64);
+        singleTest(1024);
+        singleTest(8192);
+//        singleTest(10240);
+//        singleTest(20480);
     }
 }

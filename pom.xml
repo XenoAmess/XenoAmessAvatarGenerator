@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.xenoamess</groupId>
     <artifactId>xenoamess_avatar_generator</artifactId>
-    <version>2.0.0</version>
+    <version>2.1.0</version>
     <packaging>jar</packaging>
     <name>${project.artifactId}</name>
     <description>Homemade avatar generator to generate avatars similar to my
@@ -125,6 +125,11 @@
 
 
     <dependencies>
+        <dependency>
+            <groupId>com.github.sterlp</groupId>
+            <artifactId>svg2png</artifactId>
+            <version>v0.2.2</version>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
