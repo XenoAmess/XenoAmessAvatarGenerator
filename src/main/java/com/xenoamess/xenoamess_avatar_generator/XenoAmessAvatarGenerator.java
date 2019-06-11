@@ -36,9 +36,17 @@ import java.util.ArrayList;
 import java.util.Map.Entry;
 
 
+/**
+ * <p>XenoAmessAvatarGenerator class.</p>
+ *
+ * @author XenoAmess
+ * @version 2.1.0
+ */
 public class XenoAmessAvatarGenerator {
 
     /**
+     * <p>generatePng.</p>
+     *
      * @param imageDiameter    size of the image.
      * @param innerRadiusRatio ratio of the inner circle.
      * @param colorStrings     strings of the color
@@ -63,6 +71,8 @@ public class XenoAmessAvatarGenerator {
 
 
     /**
+     * <p>generateSvg.</p>
+     *
      * @param imageDiameter    size of the image.
      * @param innerRadiusRatio ratio of the inner circle.
      * @param colorStrings     strings of the color
@@ -83,12 +93,16 @@ public class XenoAmessAvatarGenerator {
     }
 
     /**
+     * <p>generateSvg.</p>
+     *
      * @param imageDiameter    size of the image.
      * @param innerRadiusRatio ratio of the inner circle.
      * @param colorStrings     strings of the color
      * @param plateColorString color of the plate.
      * @param round            repeat time for every colors.
      * @param outputWriter     output writer
+     * @throws java.io.IOException if any.
+     * @since 2.1.0
      */
     public static void generateSvg(int imageDiameter, double innerRadiusRatio, String[] colorStrings,
                                    String plateColorString,
@@ -149,6 +163,11 @@ public class XenoAmessAvatarGenerator {
     }
 
 
+    /**
+     * <p>main.</p>
+     *
+     * @param args an array of {@link java.lang.String} objects.
+     */
     public static void main(String[] args) {
         new File("out").mkdir();
         generatePng(10240, 0.4, new String[]{"#FF0000", "#000000"}, "#FFFFFF", 3, new File("out/test.png"));
@@ -164,6 +183,7 @@ public class XenoAmessAvatarGenerator {
      * @param plateColorString color of the plate.
      * @param round            repeat time for every colors.
      * @param outputFile       output File
+     * @since 2.1.0
      * @deprecated It was written in ImageIO thus buggy and low performance.
      */
     @Deprecated

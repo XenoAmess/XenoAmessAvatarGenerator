@@ -50,7 +50,7 @@ public class XenoAmessAvatarGeneratorTest {
     public void mainTest() {
         singleTest(64);
         singleTest(1024);
-        singleTest(8192);
+//        singleTest(8192);
 //        singleTest(10240);
 //        singleTest(20480);
     }
