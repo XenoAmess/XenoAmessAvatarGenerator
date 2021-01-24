@@ -68,9 +68,20 @@ public class XenoAmessAvatarGeneratorTest {
         singleTest(512);
         singleTest(1024);
         singleTest(3072);
-//        singleTest(4096);
-//        singleTest(8192);
-//        singleTest(10240);
-//        singleTest(20480);
+        singleTest(4096);
+        singleTest(8192);
+        singleTest(10240);
+        singleTest(20480);
+    }
+
+    @Test
+    public void superBig() {
+        XenoAmessAvatarGenerator.generateSvg(
+                1000000000,
+                0.5,
+                new String[]{"#FF0000", "#000000"},
+                "#FFFFFF",
+                3,
+                new File("out/output_" + 1000000000 + ".svg"));
     }
 }
