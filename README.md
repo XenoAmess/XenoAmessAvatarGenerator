@@ -1,6 +1,6 @@
 # XenoAmessAvatarGenerator
 
-![Avatar](output.svg)
+![Avatar](out/output_256.svg)
 
 I wanna change a avatar.
 
