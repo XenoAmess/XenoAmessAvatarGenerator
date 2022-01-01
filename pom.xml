@@ -119,11 +119,6 @@
             <version>${junit-jupiter.version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>versions-maven-plugin</artifactId>
-            <version>${versions-maven-plugin.version}</version>
-        </dependency>
     </dependencies>
 
     <build>
