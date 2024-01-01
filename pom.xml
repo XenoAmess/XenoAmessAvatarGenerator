@@ -43,7 +43,7 @@
         <!---->
         <!---->
         <!--libraries versions-->
-        <svg2png.version>v1.1.0</svg2png.version>
+        <svg2png.version>1.2.1</svg2png.version>
         <!--maven plugins versions-->
         <junit-jupiter.version>5.10.1</junit-jupiter.version>
         <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
